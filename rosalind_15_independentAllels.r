@@ -11,6 +11,4 @@ prob_AaBb <- function(k, N) {
     return(p)
 }
 
-k <- 6
-N <- 15
-print(prob_AaBb(k, N))
+print(prob_AaBb(6, 15))
