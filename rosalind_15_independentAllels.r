@@ -1,7 +1,6 @@
 library(Rmpfr)
 
 prob_AaBb <- function(k, N) {
-    # Calculate the total number of organisms
     offsprings <- 2^ k #mpfr(2^k, precBits = 64)
     p <- mpfr(0, precBits = 64)
     for (i in N:offsprings) {
