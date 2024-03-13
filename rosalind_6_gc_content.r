@@ -1,11 +1,9 @@
 library("seqinr")
 library("LncFinder")
 
-#read seq files
 fileName <- "D:/Download/rosalind_gc.txt"
 dnaseq <- read.fasta(file = fileName)
 
-#compute gc content
 gc <- compute_GC(dnaseq)
 
 print(gc)
