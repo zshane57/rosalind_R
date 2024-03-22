@@ -26,4 +26,4 @@ combi <- combi * as.numeric(codons["*"])
 modulo <- combi %% 1000000
 
 cat("Combination:\n", as.character(combi), "\n")
-cat("Modulㅐ:\n", as.character(modulo), "\n")
+cat("Modulo:\n", as.character(modulo), "\n")
