@@ -9,20 +9,14 @@ fileName <- "D:/Download/rosalind_mrna.txt"
 aaseq <- readLines(fileName)
 aaseq <- as.character(unlist(strsplit(aaseq, split="")))
 
-combi <- as.bigz(0)
+combi <- as.bigz(as.numeric(codons["*"]))
 
 for(i in aaseq){
     for(j in names(codons)){
-        if(combi == 0 && i == j){
-            combi <- combi + as.numeric(codons[j])
-        }
-        if(i == j){
-            combi <- combi * as.numeric(codons[j])
-        }
+        if(i == j){ combi <- combi * as.numeric(codons[j]) }
     }
 }
 
-combi <- combi * as.numeric(codons["*"]) 
 modulo <- combi %% 1000000
 
 cat("Combination:\n", as.character(combi), "\n")
