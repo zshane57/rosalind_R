@@ -8,9 +8,7 @@ compute_protein_mass <- function(aa){
 
     for(i in aa){
         for(j in names(codons)){
-            if(i == j){
-                combi <- combi + as.numeric(codons[j])
-            }
+            if(i == j){ combi <- combi + as.numeric(codons[j]) }
         }
     }
     return(as.character(combi))
