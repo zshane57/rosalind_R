@@ -1,9 +1,4 @@
 library(Biostrings)
-dss2df <- function(dss) {
-  data.frame(
-    seq = as.character(dss)
-  )
-}
 
 fileName <- "D:/Download/rosalind_revp.txt"
 #fileName <- "D:/Download/sample.txt"
