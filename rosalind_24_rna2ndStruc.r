@@ -1,5 +1,6 @@
 library(Biostrings)
 library(gmp)
+library(stringr)
 
 perfect_match <- function(rna){
     cnt_AU <- as.bigz(str_count(rna, pattern = "A"))
