@@ -50,9 +50,7 @@ print_aa <- function(rc_seq, seqs) {
 
   aa_set <- c(rc, ori)
   aa_set <- unique(aa_set)
-  for(i in aa_set){
-    cat(i, "\n", file = "D:/Download/orf_out.txt", append = TRUE)
-  }
+  writeLines(aa_set, "D:/Download/orf_out.txt")
 }
 
 print_aa(rc_dna, dna)
