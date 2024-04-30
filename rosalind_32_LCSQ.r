@@ -1,4 +1,12 @@
-longest_SubSeq <- function(s, t){
+longest_SubSeq <- function(seq1, seq2){
+    if (nchar(seq1) > nchar(seq2)){
+        s <- seq1
+        t <- seq2
+    }else{
+        t <- seq1
+        s <- seq2
+    }
+    
     m <- nchar(s)
     n <- nchar(t)
     dp <- matrix(0, nrow = m + 1, ncol = n + 1)
@@ -39,5 +47,4 @@ fasta_set <- readDNAStringSet(fileName)
 seq1 <- as.character(fasta_set[[1]])
 seq2 <- as.character(fasta_set[[2]])
 
-#There might be more than 1 answer available, but this is accepted by rosalind
-cat(longest_SubSeq(seq2, seq1), "\n")
+cat(longest_SubSeq(seq1, seq2), "\n")
