@@ -23,7 +23,7 @@ shortest_commonSupSeq <- function(seq1, seq2)
 
     ss_len <- dp[m+1, n+1]
     ss_len <- ss_len + (m - ss_len) + (n - ss_len)
-    print(ss_len)
+    #print(ss_len)
 
     supseq <- vector("character", ss_len)
     while (m > 0 && n > 0) {
